@@ -1,0 +1,30 @@
+Question 1
+
+- Dynamic routes allow URLs to contain parameters. They are defined as:
+<Route path= “/products/ :id” element = {<ProductDetail />} />
+
+- Route parameters are accessed using the useParams() hook:
+Const { id } = useParams();
+
+- Nested routes allow child routes inside a parent route. The <Outlet /> component is used to render nested content.
+Example:
+<Route path = “/products” element={<Products />}>
+   <Route path= “:id” element={<ProductDetail />}>
+       <Route path = “reviews” element = {Reviews />} />
+   </Route>
+</Route>
+
+
+Question 2
+
+Context API + useReducer
+•	Pros : Built into React, simple setup, less boilerplate
+•	Cons: Limited debugging, possible performance issues
+•	Best for: Small to medium apps with simple global state
+
+Redux / Redux Toolkit
+•	Pros: Centralized state, strong DevTools, scalable
+•	Cons: Extra library, more complexity
+•	Best for: Large apps with complex or frequently changing state
+
+“useContent” provides global state access and useReducer manages state updates, allowing medium-sized apps to replace basic Redux functionality without using Redux
